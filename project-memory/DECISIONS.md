@@ -10,6 +10,13 @@
 ## D002 — Defer paid infrastructure until the app is ready
 - Date: 2026-11-09
 - Status: ACTIVE
-- Decision: Do not create or activate paid hosting, database, or storage resources while developing the first working version. First build and verify the application; connect paid production infrastructure only when it is ready to run.
+- Decision: Do not create or activate paid hosting, database, or storage resources while developing the first working version. Free-tier services may be used when they have no recurring charge.
 - Reason: the user does not want recurring costs during the build phase.
-- Consequence: development must use local or no-cost tools and mock data where cloud services are unavailable. The Supabase project in the Pro organization quoted at $10/month is deferred.
+- Consequence: development can use the Supabase Free project; verify current pricing before activating any paid production infrastructure.
+
+## D003 — Use Supabase Free in Hobby for the development database
+- Date: 2026-11-09
+- Status: ACTIVE
+- Decision: Create and use project “Slovo mluvené” in the user's Hobby organization, on the Free plan.
+- Reason: user explicitly chose the Hobby organization and does not want to pay during this phase.
+- Consequence: current project reference is `vqbpmfiwpellcmzajsit`, in `eu-central-1`; the initial schema is deployed there. Keep usage within Free limits and do not upgrade without user direction.
