@@ -2,10 +2,12 @@
 
 Last verified: 2026-11-09
 
-The private GitHub repository contains the project entrypoint, initial project memory, a responsive UI draft in `index.html`, and a Supabase schema draft at `supabase/migrations/20261109180000_initial_archive_schema.sql`. No Supabase project, Hetzner bucket, server deployment, or domain has been configured.
+The private GitHub repository contains the project entrypoint, initial project memory, a responsive UI draft in `index.html`, and two Supabase migrations. The Supabase Free project “Slovo mluvené” is active and healthy in the Hobby organization (region `eu-central-1`, project ref `vqbpmfiwpellcmzajsit`, API URL `https://vqbpmfiwpellcmzajsit.supabase.co`). The database has `archive_works`, `archive_episodes`, `playback_progress`, and `family_members`; RLS is enabled on all four. Family membership is required by policies for catalogue and playback access. Schema changes are recorded under `supabase/migrations/`.
 
-Agreed direction: GitHub is code and knowledge source of truth; Hetzner server will host the app; Hetzner Object Storage is intended for the ~2 TB audio collection; Supabase is intended for authentication, catalogue metadata, and playback progress. Existing iCloud archive remains the safety copy during migration.
+The project currently costs $0/month in the Free organization. The UI is not yet connected to Supabase. No Hetzner bucket, server deployment, or domain has been configured.
 
-Cost constraint: no paid infrastructure during the build phase. The Supabase organization Ludvik is on Pro and creation of another project there was quoted at $10/month; no project was created. First build and verify the app using local/no-cost development and mock content. Connect production Supabase and Hetzner services only when the app is ready to run.
+Agreed direction: GitHub is code and knowledge source of truth; Hetzner server will host the app; Hetzner Object Storage is intended for the approximately 2 TB audio collection; Supabase handles authentication, catalogue metadata, and playback progress. Existing iCloud archive remains the safety copy during migration.
 
-Next: improve the responsive app UI and implement a no-cost development path; then revisit production project provisioning and confirm current pricing before activating services. Do not put credentials in Git.
+Cost constraint: do not activate paid infrastructure during the build. The Supabase Free project is the no-cost development database; verify current pricing before creating or activating paid services.
+
+Next: connect the UI to Supabase using environment configuration, then implement family sign-in and catalogue reads. Keep audio migration and deployment deferred until access controls and backup are verified. Do not put credentials in Git.
