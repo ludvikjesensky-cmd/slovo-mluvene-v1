@@ -1,13 +1,13 @@
 # Slovo mluvené
 
 ## Purpose
-Soukromý rodinný webový archiv rozhlasových her, četeb a povídek. Audio-only; rozhraní vychází z OTT katalogu Streamit, ale používá vlastní identitu „Příběhy, které zní“.
+Soukromý rodinný webový archiv rozhlasových her, četeb a povídek. Audio-only; vizuální směr vychází z OTT rozhraní Streamit, převedeného na katalog a přehrávání zvukových nahrávek.
 
 ## Source of Truth
 GitHub: `ludvikjesensky-cmd/slovo-mluvene-v1` (private). App source and project knowledge are versioned here.
 
 ## Current status
-Initial responsive scaffold and Supabase Free project are configured. Database schema is live. No production deployment, Hetzner audio bucket, or domain is configured.
+Initial responsive Streamit-inspired homepage concept and Supabase Free project are configured. Database schema is live. No production deployment, Hetzner audio bucket, or domain is configured.
 
 ## Project Memory
 Read `project-memory/SCOPE.md`, `CURRENT_STATE.md`, then `ARCHITECTURE.md`, `DECISIONS.md`, `FAILURES.md`, and `OPEN_QUESTIONS.md` before architecture changes.
