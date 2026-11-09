@@ -1,0 +1,42 @@
+name: Publish audio archive preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Prepare public preview
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload only the homepage
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Publish preview
+        id: deployment
+        uses: actions/deploy-pages@v4
