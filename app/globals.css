@@ -263,3 +263,27 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1c4
 .related-titles{grid-template-columns:1fr}
 .related-title{grid-template-columns:76px 1fr}
 }
+
+/* Full-bleed title detail: artwork starts at the top edge beneath the overlay navigation. */
+.work-hero{width:100%;height:100svh;min-height:680px;max-height:1120px;margin:0;border:0}
+.work-hero-image{object-position:center 44%}
+.work-hero-shade{background:linear-gradient(90deg,rgba(7,8,10,.88) 0%,rgba(7,8,10,.65) 34%,rgba(7,8,10,.12) 73%,rgba(7,8,10,.02) 100%),linear-gradient(0deg,rgba(7,8,10,.9) 0%,rgba(7,8,10,.28) 27%,transparent 63%),linear-gradient(180deg,rgba(5,6,7,.48),transparent 22%)}
+.work-hero-copy{position:absolute;left:max(40px,calc((100vw - var(--max))/2));bottom:clamp(92px,13vh,150px);width:min(760px,68vw);max-width:none;padding:0}
+.work-hero h1{font-size:clamp(48px,6.6vw,88px)}
+.work-art-caption{right:42px;bottom:35px}
+.detail-content{padding-top:50px;padding-bottom:64px}
+.work-sidebar{padding:0;background:transparent;border:0}
+.detail-breadcrumbs{display:none}
+@media(max-width:850px){
+.work-hero-copy{left:27px;width:min(700px,76vw)}
+}
+@media(max-width:680px){
+.work-hero{height:92svh;min-height:690px;max-height:none}
+.work-hero-image{object-position:62% center}
+.work-hero-shade{background:linear-gradient(0deg,rgba(7,8,10,.98) 0%,rgba(7,8,10,.87) 34%,rgba(7,8,10,.2) 78%,rgba(7,8,10,.32) 100%),linear-gradient(90deg,rgba(7,8,10,.5),transparent)}
+.work-hero-copy{left:22px;right:22px;bottom:82px;width:auto}
+.work-hero h1{font-size:clamp(42px,11vw,62px)}
+.work-art-caption{right:18px;bottom:24px}
+.detail-content{width:calc(100% - 34px);padding-top:36px;padding-bottom:65px}
+.work-sidebar{padding:0;background:transparent;border:0}
+}
