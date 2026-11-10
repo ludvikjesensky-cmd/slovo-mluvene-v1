@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "app/**"
+      - "lib/**"
       - "public/covers/**"
       - "package.json"
       - "package-lock.json"
