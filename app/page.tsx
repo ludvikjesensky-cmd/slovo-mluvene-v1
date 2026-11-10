@@ -138,10 +138,11 @@ export default function HomePage() {
 
       <section className="hero" id="domu" aria-label="Doporučený titul">
         <Image className="hero-image" src={imageSource(featured.cover)} alt="" fill priority sizes="100vw" unoptimized />
+        <button className="hero-image-link" type="button" onClick={() => setDetail(featured)} aria-label={"Otevřít detail: " + featured.title} />
         <div className="hero-overlay" />
         <div className="hero-content page-width">
           <p className="eyebrow"><span className="eyebrow-dot" /> {featured.kind} <span className="eyebrow-separator">/</span> Ukázkový titul</p>
-          <h1>{featured.title}</h1>
+          <h1><button className="hero-title-link" type="button" onClick={() => setDetail(featured)}>{featured.title}</button></h1>
           <div className="hero-meta">
             <span>{featured.year}</span><i /> <span>{featured.length}</span><i /> <span>Česky</span>
           </div>
@@ -150,9 +151,6 @@ export default function HomePage() {
           <div className="hero-actions">
             <button className="button button-primary" type="button" onClick={() => setTrack(featured)}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> Poslechnout ukázku
-            </button>
-            <button className="button button-secondary" type="button" onClick={() => setDetail(featured)}>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg> Detail titulu
             </button>
           </div>
           <div className="hero-pagination" aria-label="Doporučené tituly">
