@@ -9,7 +9,7 @@ Initial Next.js foundation and title-banner design preview.
 ludvikjesensky-cmd/slovo-mluvene-v1 is public. It contains the Next.js app in app/, TypeScript configuration, pinned direct package versions in package.json, original fictional SVG cover illustrations in public/covers/, Supabase migrations, and project memory. The earlier index.html remains as a legacy draft.
 
 ## Application
-The home page demonstrates a large featured title banner with overlay metadata, three rotating featured titles, title cards, category filters, search, title detail dialog with sample episodes, and a fixed preview player. Sample titles, author/performer labels, and episode metadata are fictional. There is no real audio, login, or Supabase client connection yet.
+The home page demonstrates a large featured title banner with overlay metadata; clicking its artwork or title opens the detail view. The separate “Detail titulu” button was removed; the listening action remains. Catalogue cards open detail by clicking the artwork/title. The page also includes three rotating featured titles, category filters, search, sample episodes, and a fixed preview player. Sample titles, author/performer labels, and episode metadata are fictional. There is no real audio, login, or Supabase client connection yet.
 
 ## Build and preview
 The Next.js default build target is standalone output for a future Node.js server. The GitHub Pages workflow builds the static preview from Next.js with the project base path. Workflow run #4 for commit f82edea succeeded on 2026-11-10, and the deployed preview was opened and verified at https://ludvikjesensky-cmd.github.io/slovo-mluvene-v1/. Pages publishes only the generated static artifact; no secrets or private family data are part of it.
