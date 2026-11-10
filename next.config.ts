@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
     ? {
         output: "export" as const,
         basePath: "/slovo-mluvene-v1",
+        trailingSlash: true,
       }
     : {
         output: "standalone" as const,
