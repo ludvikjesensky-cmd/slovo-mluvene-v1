@@ -12,7 +12,7 @@ ludvikjesensky-cmd/slovo-mluvene-v1 is public. It contains the Next.js app in ap
 The home page demonstrates a large featured title banner with overlay metadata, three rotating featured titles, title cards, category filters, search, title detail dialog with sample episodes, and a fixed preview player. Sample titles, author/performer labels, and episode metadata are fictional. There is no real audio, login, or Supabase client connection yet.
 
 ## Build and preview
-The Next.js default build target is standalone output for a future Node.js server. The GitHub Pages workflow is being switched to build the static preview from Next.js with a project base path. The Pages site should publish only the generated static artifact; no secrets or private family data are part of it. The first workflow run after this change still needs to be checked.
+The Next.js default build target is standalone output for a future Node.js server. The GitHub Pages workflow builds the static preview from Next.js with the project base path. Workflow run #4 for commit f82edea succeeded on 2026-11-10, and the deployed preview was opened and verified at https://ludvikjesensky-cmd.github.io/slovo-mluvene-v1/. Pages publishes only the generated static artifact; no secrets or private family data are part of it.
 
 Direct dependency versions are pinned in package.json. A package lockfile has not yet been generated because npm registry access is unavailable in this workspace. Generate and commit package-lock.json when registry access is available, before production deployment.
 
