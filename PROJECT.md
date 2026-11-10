@@ -1,27 +1,27 @@
 # Slovo mluvené
 
 ## Purpose
-Soukromý rodinný webový archiv rozhlasových her, četeb a povídek. Audio-only; vizuální směr vychází z OTT rozhraní Streamit, převedeného na katalog a přehrávání zvukových nahrávek.
+Soukromý rodinný webový archiv rozhlasových her, četeb a povídek. Audio-only katalog s velkými bannery titulů, přehráváním a přístupem pouze pro schválené členy rodiny.
 
 ## Source of Truth
-GitHub: `ludvikjesensky-cmd/slovo-mluvene-v1`. The repository is currently public; app source and project knowledge are versioned here.
+GitHub: ludvikjesensky-cmd/slovo-mluvene-v1 (currently public). Project knowledge is in this file and project-memory/; application source is in this repository.
 
-## Current status
-Initial responsive Streamit-inspired homepage concept and Supabase Free project are configured. Database schema is live. GitHub Pages deployment workflow is present, but Pages has not yet been enabled/configured. No Hetzner audio bucket, server deployment, or domain is configured.
+## Current generation/status
+First Next.js + TypeScript application foundation is in place. GitHub Pages shows a public, static preview with fictional sample data only. Production is intended for the user's Hetzner server. Supabase Free project and initial database schema are active. Authentication is not connected; sample playback has no real audio.
 
 ## Project Memory
-Read `project-memory/SCOPE.md`, `CURRENT_STATE.md`, then `ARCHITECTURE.md`, `DECISIONS.md`, `FAILURES.md`, and `OPEN_QUESTIONS.md` before architecture changes.
+Read project-memory/SCOPE.md and CURRENT_STATE.md first. For architecture or integration work, also read ARCHITECTURE.md, DECISIONS.md, FAILURES.md, and OPEN_QUESTIONS.md. Update the relevant canonical memory files after significant work.
 
 ## Storage map
-- KNOWLEDGE: `PROJECT.md`, `project-memory/`, `docs/`
-- SOURCE: `src/`, `supabase/`, `.github/workflows/pages.yml`
-- PRODUCTION: TBD (Hetzner server)
-- ARTIFACTS: GitHub Pages workflow currently publishes only the static `index.html` to the public site; GitHub Pages is not yet configured.
-- EXTERNAL: approximately 2 TB audio planned for private Hetzner Object Storage; Supabase Free project `vqbpmfiwpellcmzajsit` in organization Hobby (region `eu-central-1`) handles auth/catalogue/progress; Hetzner storage and app hosting are not configured.
-- BACKUP: existing iCloud archive until migration and independent backup are verified.
+- KNOWLEDGE: PROJECT.md, project-memory/, docs/
+- SOURCE: app/, public/covers/, supabase/, package.json, .github/workflows/
+- PRODUCTION: Hetzner server (not yet identified or configured)
+- ARTIFACTS: GitHub Pages static preview; production Next.js build will use standalone Node output
+- EXTERNAL: Supabase Free project vqbpmfiwpellcmzajsit (EU Frankfurt) for auth/catalogue/progress; planned private Hetzner Object Storage for approximately 2 TB audio
+- BACKUP: iCloud archive remains a second copy during any later migration
 
 ## Critical rules
-Never commit secrets, audio masters, or credentials. Use environment variables for Supabase public URL/key and server-only Hetzner S3 credentials. Audio bucket must remain private. Do not deploy or migrate audio until access controls and backup are verified.
+Never commit credentials, API keys, audio masters, or private family metadata. Use environment variables for credentials. The audio bucket must be private; playback links must be short-lived and issued only after authorization. Do not activate paid infrastructure or migrate audio during the build phase. Do not make the app or audio public.
 
-## Reading
-For UI work, read SCOPE and CURRENT_STATE. For integrations, also read ARCHITECTURE, DECISIONS, and OPEN_QUESTIONS. Supabase schema source lives in `supabase/migrations/`.
+## Runtime
+Local development: Node.js 24.22.0, npm run dev. Default production build: npm run build then npm run start; next.config.ts uses standalone output. The Pages workflow sets BUILD_TARGET=github-pages to export only the fictional design preview.
