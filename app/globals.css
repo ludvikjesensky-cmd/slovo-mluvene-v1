@@ -1,18 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root{color-scheme:dark;--bg:#0c0d0f;--panel:#15171a;--panel-soft:#1c1e21;--text:#f6f5f2;--muted:#a5a7a8;--dim:#74777b;--line:#292b2e;--red:#df2935;--red-bright:#f13943;--gold:#c6a878;--max:1440px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',Arial,sans-serif;font-size:15px;line-height:1.5}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5}
 button,input{font:inherit}
 button{color:inherit}
 a{color:inherit;text-decoration:none}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1c477;outline-offset:3px}
 .page-width{width:min(var(--max),calc(100% - 80px));margin-inline:auto}
 .site-header{position:absolute;z-index:5;top:0;left:0;right:0;height:88px;padding:0 max(40px,calc((100vw - var(--max))/2));display:flex;align-items:center;gap:58px;background:linear-gradient(180deg,rgba(6,8,10,.84),rgba(6,8,10,.2));border-bottom:1px solid rgba(255,255,255,.07)}
-.brand{display:flex;align-items:center;gap:10px;white-space:nowrap;font:500 17px/1 Manrope,sans-serif;letter-spacing:-.035em}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap;font:500 17px/1 Arial,Helvetica,sans-serif;letter-spacing:-.035em}
 .brand strong{font-weight:800}
-.brand-mark{display:grid;place-items:center;width:35px;height:35px;color:#fff;background:var(--red);font:800 25px/1 Manrope,sans-serif;border-radius:4px 12px 4px 12px;transform:skew(-7deg)}
+.brand-mark{display:grid;place-items:center;width:35px;height:35px;color:#fff;background:var(--red);font:800 25px/1 Arial,Helvetica,sans-serif;border-radius:4px 12px 4px 12px;transform:skew(-7deg)}
 .brand-mark.small{width:23px;height:23px;font-size:16px;display:inline-grid;vertical-align:middle;margin-right:7px}
 .desktop-nav{display:flex;align-items:center;gap:32px;color:#d6d7d8;font-size:13px}
 .desktop-nav a{position:relative;padding:8px 0;transition:color .18s}
@@ -35,7 +33,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1c4
 .eyebrow{display:flex;align-items:center;gap:9px}
 .eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 14px #e72b3a}
 .eyebrow-separator{color:#777}
-.hero h1{max-width:720px;margin:20px 0 14px;font:800 clamp(44px,6.5vw,84px)/.99 Manrope,sans-serif;letter-spacing:-.065em;text-shadow:0 4px 20px #0008}
+.hero h1{max-width:720px;margin:20px 0 14px;font:800 clamp(44px,6.5vw,84px)/.99 Arial,Helvetica,sans-serif;letter-spacing:-.065em;text-shadow:0 4px 20px #0008}
 .hero-meta{display:flex;align-items:center;gap:12px;color:#e0e0dd;font-size:13px}
 .hero-meta i,.card-meta i,.detail-meta i,.detail-credits+ h3 i{width:3px;height:3px;border-radius:50%;background:#b9b8b2}
 .hero-description{max-width:550px;margin:20px 0 11px;color:#d5d5d2;font-size:15px;line-height:1.7}
@@ -60,7 +58,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1c4
 .catalog{padding-top:38px;padding-bottom:66px}
 .section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px}
 .section-kicker{color:#c5a879;font-size:9px}
-.section-heading h2{margin:5px 0 0;font:700 24px/1.2 Manrope,sans-serif;letter-spacing:-.035em}
+.section-heading h2{margin:5px 0 0;font:700 24px/1.2 Arial,Helvetica,sans-serif;letter-spacing:-.035em}
 .catalog-count{color:#85878a;font-size:11px}
 .catalog-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:17px}
 .category-tabs{display:flex;gap:7px}
@@ -77,7 +75,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1c4
 .cover-button:hover .cover-frame>img{transform:scale(1.055)}
 .cover-gradient{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(6,7,8,.88),transparent 68%),linear-gradient(90deg,rgba(6,7,8,.2),transparent 65%)}
 .cover-type{position:absolute;z-index:2;top:11px;left:11px;padding:4px 7px;border:1px solid #ffffff70;border-radius:2px;background:#1119;color:#fff;font-size:8px;letter-spacing:.09em;text-transform:uppercase}
-.cover-title{position:absolute;z-index:2;left:13px;right:12px;bottom:14px;color:#fff;font:700 18px/1.08 Manrope,sans-serif;letter-spacing:-.035em;text-shadow:0 2px 8px #000}
+.cover-title{position:absolute;z-index:2;left:13px;right:12px;bottom:14px;color:#fff;font:700 18px/1.08 Arial,Helvetica,sans-serif;letter-spacing:-.035em;text-shadow:0 2px 8px #000}
 .cover-open{position:absolute;z-index:2;right:11px;top:11px;opacity:0;color:white;font-size:10px;transition:opacity .2s}
 .cover-button:hover .cover-open{opacity:1}
 .cover-open span{color:#ff7278}
@@ -107,7 +105,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1c4
 .detail-art>img{object-fit:cover}
 .detail-art-shade{position:absolute;inset:0;background:linear-gradient(0deg,#151719 0%,transparent 82%),linear-gradient(90deg,#1117,transparent)}
 .detail-label{position:absolute;left:27px;bottom:95px;color:#f0c680;font-size:9px;font-weight:700;letter-spacing:.2em}
-.detail-art h2{position:absolute;left:27px;bottom:28px;right:55px;margin:0;font:800 clamp(28px,5vw,43px)/1.04 Manrope,sans-serif;letter-spacing:-.05em}
+.detail-art h2{position:absolute;left:27px;bottom:28px;right:55px;margin:0;font:800 clamp(28px,5vw,43px)/1.04 Arial,Helvetica,sans-serif;letter-spacing:-.05em}
 .detail-body{padding:1px 27px 27px}
 .detail-meta{display:flex;align-items:center;gap:10px;margin:6px 0 14px;color:#bdc0c2;font-size:11px}
 .detail-meta i{width:3px;height:3px;border-radius:50%;background:#888}
@@ -116,7 +114,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1c4
 .detail-credits div{min-width:120px}
 .detail-credits dt{color:#7e8184;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
 .detail-credits dd{margin:4px 0 0;color:#e3e3e1;font-size:11px}
-.detail-body h3{margin:22px 0 8px;font:700 15px Manrope,sans-serif}
+.detail-body h3{margin:22px 0 8px;font:700 15px Arial,Helvetica,sans-serif}
 .episode-list{list-style:none;margin:0;padding:0;border-top:1px solid #303236}
 .episode-list li{display:flex;align-items:center;gap:12px;min-height:48px;border-bottom:1px solid #303236;color:#d1d2d0;font-size:11px}
 .episode-play{color:#eb535d;font-size:10px}
