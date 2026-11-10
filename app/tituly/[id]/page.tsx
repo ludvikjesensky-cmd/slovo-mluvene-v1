@@ -43,14 +43,7 @@ export default async function TitleDetailPage({ params }: { params: Promise<{ id
         </div>
       </header>
 
-      <div className="detail-wrap page-width">
-        <nav className="detail-breadcrumbs" aria-label="Drobečková navigace">
-          <Link href="/">Domů</Link><span aria-hidden="true">/</span>
-          <Link href="/#archiv">Archiv</Link><span aria-hidden="true">/</span>
-          <span aria-current="page">{work.title}</span>
-        </nav>
-
-        <section className="work-hero" aria-labelledby="work-title">
+      <section className="work-hero" aria-labelledby="work-title">
           <Image className="work-hero-image" src={imageSource(work.cover)} alt="" fill priority sizes="(max-width: 760px) 100vw, 1200px" unoptimized />
           <div className="work-hero-shade" />
           <div className="work-hero-copy">
@@ -63,6 +56,7 @@ export default async function TitleDetailPage({ params }: { params: Promise<{ id
           <span className="work-art-caption">PŘÍBĚHY, KTERÉ ZNÍ</span>
         </section>
 
+      <div className="detail-content page-width">
         <div className="work-detail-grid">
           <div className="work-main-column">
             <section className="detail-section synopsis-section">
