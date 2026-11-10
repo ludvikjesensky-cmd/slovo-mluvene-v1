@@ -33,3 +33,10 @@
 - Decision: The home page features large visual banners for individual titles, with key metadata over the artwork and a detail view when opened.
 - Reason: This is the part of the Streamit reference the user explicitly selected.
 - Consequence: Artwork, title, author/performer, type, year, and duration are presented as title-level information; video is out of scope.
+
+## D006 — Open title details from the artwork or title
+- Date: 2026-11-10
+- Status: ACTIVE
+- Decision: The featured banner opens its detail view when its artwork or title is clicked. Remove a separate “Detail titulu” button. Catalogue cards likewise open details through their artwork and displayed title.
+- Reason: Keep the title itself as the clear entry point and reduce redundant controls.
+- Consequence: Keep the play action distinct; banner artwork clicks must not block title, carousel, or play controls.
