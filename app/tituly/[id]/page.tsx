@@ -1,10 +1,21 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { imageSource, works } from "../../../lib/works";
 
 export function generateStaticParams() {
   return works.map((work) => ({ id: work.id }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const work = works.find((item) => item.id === id);
+  if (!work) return { title: "Titul nenalezen | Slovo mluvené" };
+  return {
+    title: work.title + " | Slovo mluvené",
+    description: work.description,
+  };
 }
 
 export default async function TitleDetailPage({ params }: { params: Promise<{ id: string }> }) {
