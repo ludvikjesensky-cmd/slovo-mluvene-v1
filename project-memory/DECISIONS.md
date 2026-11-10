@@ -40,3 +40,10 @@
 - Decision: The featured banner opens its detail view when its artwork or title is clicked. Remove a separate “Detail titulu” button. Catalogue cards likewise open details through their artwork and displayed title.
 - Reason: Keep the title itself as the clear entry point and reduce redundant controls.
 - Consequence: Keep the play action distinct; banner artwork clicks must not block title, carousel, or play controls.
+
+## D007 — Give each title a full detail page
+- Date: 2026-11-10
+- Status: ACTIVE
+- Decision: Title details use their own page and URL rather than a modal. The page provides the title artwork, synopsis, metadata, creators and performers, episode list, themes, and related titles.
+- Reason: The archive should support detailed editorial context and a stable page that family members can open and revisit.
+- Consequence: Keep the static Pages preview working by generating a page for each known title; the future server catalogue may later load records dynamically.
