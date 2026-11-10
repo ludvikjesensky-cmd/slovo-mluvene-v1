@@ -181,3 +181,4 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1c4
 .hero-content{z-index:2}
 .hero-title-link{padding:0;border:0;background:none;color:inherit;font:inherit;letter-spacing:inherit;text-align:left;cursor:pointer}
 .hero-title-link:focus-visible,.hero-image-link:focus-visible{outline:3px solid var(--accent,#e51f2a);outline-offset:5px}
+.hero-content{pointer-events:none}.hero-title-link,.hero-actions,.hero-pagination{pointer-events:auto}
