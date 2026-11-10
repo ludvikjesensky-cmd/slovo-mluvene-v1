@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
     ? {
         output: "export" as const,
         basePath: "/slovo-mluvene-v1",
-        assetPrefix: "/slovo-mluvene-v1",
       }
     : {
         output: "standalone" as const,
