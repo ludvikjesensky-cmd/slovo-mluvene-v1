@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" fill="none">
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#b5a580"/><stop offset=".45" stop-color="#61705c"/><stop offset="1" stop-color="#182a27"/></linearGradient><radialGradient id="light"><stop stop-color="#f2dcb0" stop-opacity=".8"/><stop offset="1" stop-color="#e9c987" stop-opacity="0"/></radialGradient></defs>
+<rect width="800" height="520" fill="url(#bg)"/><circle cx="425" cy="160" r="190" fill="url(#light)"/>
+<path d="M0 340c110-58 178-54 278 0s204 65 303 8 142-65 219-9v181H0z" fill="#182925"/>
+<path d="M80 520c90-120 145-191 230-208 91-17 174 38 265 208z" fill="#384b3b"/>
+<path d="M420 520c-8-95 16-185 67-244 56 52 83 137 79 244z" fill="#66734c"/>
+<path d="M0 433c94-68 188-83 286-40 88 39 156 41 262 0 97-38 171-34 252 7v120H0z" fill="#23362e"/>
+<g fill="#c7ad73"><circle cx="173" cy="360" r="13"/><circle cx="262" cy="318" r="9"/><circle cx="608" cy="382" r="12"/><circle cx="684" cy="350" r="8"/></g>
+<path d="M402 500c10-77-6-121-42-155 55 6 94 37 112 94-16-90 15-147 76-174-38 58-39 137-3 235z" fill="#8c8c5b"/>
+</svg>
