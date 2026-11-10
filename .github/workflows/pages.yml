@@ -4,16 +4,28 @@ on:
   push:
     branches: [main]
     paths:
-      - index.html
-      - .github/workflows/pages.yml
+      - "app/**"
+      - "public/covers/**"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - "next.config.ts"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      BUILD_TARGET: github-pages
+      NEXT_PUBLIC_BASE_PATH: /slovo-mluvene-v1
     permissions:
       contents: read
       pages: write
@@ -25,18 +37,24 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Prepare public preview
-        run: |
-          mkdir -p _site
-          cp index.html _site/index.html
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install pinned dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build static design preview
+        run: npm run build
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload only the homepage
+      - name: Upload only the Next.js preview
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _site
+          path: out
 
       - name: Publish preview
         id: deployment
