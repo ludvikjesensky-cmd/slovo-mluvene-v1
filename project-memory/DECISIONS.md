@@ -47,3 +47,10 @@
 - Decision: Title details use their own page and URL rather than a modal. The page provides the title artwork, synopsis, metadata, creators and performers, episode list, themes, and related titles.
 - Reason: The archive should support detailed editorial context and a stable page that family members can open and revisit.
 - Consequence: Keep the static Pages preview working by generating a page for each known title; the future server catalogue may later load records dynamically.
+
+## D008 — Open each detail page with edge-to-edge artwork
+- Date: 2026-11-10
+- Status: ACTIVE
+- Decision: Detail pages begin at the top edge with a full-bleed, borderless hero image spanning the viewport. The site navigation overlays the artwork; omit breadcrumb navigation.
+- Reason: The title artwork should set the scene immediately and occupy as much of the opening screen as possible.
+- Consequence: Keep text readable over the image with a dark gradient; start the descriptive detail content below the hero.
