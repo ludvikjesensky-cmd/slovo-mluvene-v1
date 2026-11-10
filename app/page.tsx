@@ -87,6 +87,7 @@ const works: Work[] = [
 
 const categories = ["Vše", "Hry", "Četby", "Povídky"];
 const featuredIds = ["nocni-spoj", "hlas-ve-studiu", "zahrada"];
+const imageSource = (path: string) => (process.env.NEXT_PUBLIC_BASE_PATH || "") + path;
 
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState("Vše");
@@ -136,7 +137,7 @@ export default function HomePage() {
       </header>
 
       <section className="hero" id="domu" aria-label="Doporučený titul">
-        <Image className="hero-image" src={featured.cover} alt="" fill priority sizes="100vw" unoptimized />
+        <Image className="hero-image" src={imageSource(featured.cover)} alt="" fill priority sizes="100vw" unoptimized />
         <div className="hero-overlay" />
         <div className="hero-content page-width">
           <p className="eyebrow"><span className="eyebrow-dot" /> {featured.kind} <span className="eyebrow-separator">/</span> Ukázkový titul</p>
@@ -185,7 +186,7 @@ export default function HomePage() {
               <article className="title-card" key={work.id}>
                 <button className="cover-button" type="button" onClick={() => setDetail(work)} aria-label={"Otevřít detail: " + work.title}>
                   <span className="cover-frame">
-                    <Image src={work.cover} alt="" fill sizes="(max-width: 680px) 75vw, 34vw" unoptimized />
+                    <Image src={imageSource(work.cover)} alt="" fill sizes="(max-width: 680px) 75vw, 34vw" unoptimized />
                     <span className="cover-gradient" />
                     <span className="cover-type">{work.kind}</span>
                     <span className="cover-title">{work.title}</span>
@@ -228,7 +229,7 @@ export default function HomePage() {
           <section className="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title" onClick={(event) => event.stopPropagation()}>
             <button className="modal-close" type="button" onClick={() => setDetail(null)} aria-label="Zavřít detail">×</button>
             <div className="detail-art">
-              <Image src={detail.cover} alt="" fill sizes="(max-width: 680px) 100vw, 720px" unoptimized />
+              <Image src={imageSource(detail.cover)} alt="" fill sizes="(max-width: 680px) 100vw, 720px" unoptimized />
               <div className="detail-art-shade" />
               <span className="detail-label">UKÁZKOVÝ TITUL</span>
               <h2 id="detail-title">{detail.title}</h2>
